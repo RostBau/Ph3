@@ -1,31 +1,65 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% Dokumentinformationen %
-%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Dokumentinformationen	======================================================================
 \newcommand{\titleinfo}{Physik 3 - Formelsammlung}
-\newcommand{\authorinfo}{Braun \& Co, J.Rast, S.K\"orner, C.Gwerder}
-\newcommand{\versioninfo}{$Version: 1.0$ | 
-						gem\"ass Unterricht David Sourlier/HS2012}
+\newcommand{\versioninfo}{HS 2019 | gemäss Unterricht B.Bucher}
+\newcommand{\authorinfo}{Braun \& Co, J.Rast, S.Körner, C.Gwerder, S.Roth}
+\newcommand{\licence}{CC BY-NC-SA}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Standard projektübergreifender Header für
-% - Makros 
-% - Farben
-% - Mathematische Operatoren
+
+%eigene Befehle ==============================================================================
+\newcommand{\skript}[1]{$_{\textcolor{red}{\mbox{\small{Skript S.#1}}}}$}
+\newcommand{\verweis}[2]{\small{(siehe auch \ref{#1}, #2 (S. \pageref{#1}))}}
+\newcommand{\verweiskurz}[1]{(\small{siehe \ref{#1}\normalsize)}}
+\newcommand{\subsubadd}[1]{\textcolor{black}{\mbox{#1}}}
+
+\newcommand{\formelbuch}[1]{$_{\textcolor{red}{\mbox{\small{S#1}}}}$}
+\newcommand{\kuchling}[1]{$_{\textcolor{red}{\mbox{\small{Kuchling #1}}}}$}
+\newcommand{\stoecker}[1]{$_{\textcolor{orange}{\mbox{\small{Stöcker #1}}}}$}
+
+\newcommand{\skriptsection}[2]{\section{#1 {\tiny Skript S. #2}}}
+\newcommand{\skriptsubsection}[2]{\subsection{#1 {\tiny Skript S. #2}}}
+\newcommand{\skriptsubsubsection}[2]{\subsubsection{#1 {\tiny Skript S. #2}}}
+
+\newcommand{\matlab}[1]{\footnotesize{(Matlab: \texttt{#1})}\normalsize{}}
+
+\newcommand*{\diff}{\mathop{}\!\mathrm{d}} %Makro für 'd' von Integral- und Differentialgleichungen 
+
+
+% Dokumenteinstellungen	 =====================================================================
+\include{header/header}
+
+
+%Mathematische Operatoren: ===================================================================
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\PolyGrad}{PolyGrad}
+
+
+%% Fouriertransformationen
+%\unitlength1cm
+%\newcommand{\FT}
+%{
+%	\begin{picture}(1,0.5)
+%	\put(0.2,0.1){\circle{0.14}}\put(0.27,0.1){\line(1,0){0.5}}\put(0.77,0.1){\circle*{0.14}}
+%	\end{picture}
+%}
 %
-% DORT NUR ERGÄNZEN, NICHTS LÖSCHEN
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{header/header} 
+%\newcommand{\IFT}
+%{
+%	\begin{picture}(1,0.5)
+%	\put(0.2,0.1){\circle*{0.14}}\put(0.27,0.1){\line(1,0){0.45}}\put(0.77,0.1){\circle{0.14}}
+%	\end{picture}
+%}
 
-%Package für Grössenänderung im mathmode
-\usepackage{relsize}
 
-% Möglichst keine Ergänzungen hier, sondern in header.tex
+
+% Sections ======================================================================
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{./files/optik}
-\input{./files/schwingungen}
-\input{./files/wellen}
-\input{./files/idiotenseite}
-
+	\input{./files/optik}
+	\input{./files/schwingungen}
+	\input{./files/wellen}
+	\input{./files/idiotenseite}
 \end{document}
